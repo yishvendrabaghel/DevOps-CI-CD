@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: project-2
-        image: yishu91/project-2:< .Values.image.tag >
+        image: "yishu91/project-2:{{ .Values.image.tag }}"
         resources:
           limits:
             memory: "512Mi"
