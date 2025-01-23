@@ -2,13 +2,13 @@ Thanks for sharing your version! It has a great flow and is very hands-on. Here'
 
 ---
 
-# DevOpsified Go Web Application 🚀
+# DevOpsified Go Application 🚀
 
-This repository demonstrates the process of taking a Go web application, containerizing it, and deploying it using Kubernetes with GitOps workflows and CI/CD automation.
+This repository demonstrates the process of taking a Go Application, containerizing it, and deploying it using Kubernetes with GitOps workflows and CI/CD automation.
 
 ## Overview 🛠️
 
-We received the Go web application from the developer and performed the following steps to fully automate its deployment:
+We received the Go Application from the developer and performed the following steps to fully automate its deployment:
 
 1. **Dockerization**: Created a Dockerfile with the necessary build commands.  
 2. **Building and Pushing the Image**: Built the Docker image and pushed it to Docker Hub.  
@@ -71,7 +71,7 @@ We received the Go web application from the developer and performed the followin
   ```bash
   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.7/manifests/install.yaml  
 
-  
+
   kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"LoadBalancer\"}}'
   ```  
 
@@ -87,7 +87,7 @@ Once the project is set up:
    - Update the Helm chart with the new image tag.  
 2. ArgoCD will automatically deploy the changes to the Kubernetes cluster.  
 
-### And that’s it! 🎉 You now have a fully automated CI/CD pipeline for the Go web application.
+### And that’s it! 🎉 You now have a fully automated CI/CD pipeline for the Go Application.
 
 --- 
 
