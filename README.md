@@ -143,21 +143,7 @@ Go to repo settings → Secrets and Variables → Actions → Create new secrets
 
 ---
 
-## Repository Structure 📂
 
-```plaintext
-.
-├── Dockerfile              # 🐳 Docker configuration for the app  
-├── helm/  
-│   └── project-2-chart/    # ⚓ Helm chart for Kubernetes deployment  
-├── k8s/  
-│   └── deployment.yaml     # ♸️ Kubernetes deployment manifest  
-├── main.go                 # 💻 Go app source code  
-├── README.md               # 📘 Project documentation (this file)  
-└── static/                 # 🗸 Static assets for the website  
-```
-
----
 
 ## Future Improvements 🔮
 
