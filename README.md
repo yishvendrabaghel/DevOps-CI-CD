@@ -23,6 +23,13 @@ This project automates the deployment of a Go web application 🌐 using modern 
 3. **Host Configuration 🛠️**:  
    - Added an entry to `/etc/hosts` with the **ALB link** and associated IP address (retrieved using the `nslookup` command).  
 
+   it should look like this :-
+   ```bash
+   a9e4540138f464580944f8ca5d0d69ac-1482153858.us-east-1.elb.amazonaws.com project-2.local
+   34.195.87.75 project-2.local
+   ```
+
+
 4. **Helm Integration ⚓**:  
    - Developed a Helm chart for better configurability and reusability of Kubernetes deployments.  
 
