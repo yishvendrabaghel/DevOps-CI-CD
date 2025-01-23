@@ -42,8 +42,11 @@ We received the Go Application from the developer and performed the following st
     kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0/deploy/static/provider/cloud/deploy.yaml
     ```  
 
-- **Host Entry**: Add an entry to `/etc/hosts` for the ALB (Application Load Balancer) IP using the `nslookup` command to retrieve the IP.
-
+- **Host Entry**: Add an entry to `/etc/hosts` for the ALB (Application Load Balancer) IP using the `nslookup` command to retrieve the IP. this is sample:
+ ```bash
+a9e4540138f464580944f8ca5d0d69ac-1482153858.us-east-1.elb.amazonaws.com project-2.local
+34.195.87.75 project-2.local
+ ```
 ### 3. Helm Chart ⚓  
 - Created a Helm chart to manage Kubernetes resources.  
 - Used Helm for easier deployments and management of configurations.  
