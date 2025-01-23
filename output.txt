@@ -1,0 +1,25 @@
+.
+├── Dockerfile
+├── go.mod
+├── helm
+│   └── project-2-chart
+│       ├── Chart.yaml
+│       ├── templates
+│       │   └── deployment.yaml
+│       └── values.yaml
+├── k8s
+│   └── deployment.yaml
+├── LICENSE
+├── main.go
+├── main_test.go
+├── output.txt
+├── README.md
+└── static
+    ├── about.html
+    ├── contact.html
+    ├── courses.html
+    ├── home.html
+    └── images
+        └── golang-website.png
+
+6 directories, 16 files
