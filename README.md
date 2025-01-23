@@ -69,10 +69,14 @@ We received the Go Application from the developer and performed the following st
 ### 5. CD with ArgoCD 🎯  
 - Installed ArgoCD using the following commands:  
   ```bash
-  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.7/manifests/install.yaml  
-
-
-  kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"LoadBalancer\"}}'
+ kubectl create namespace argocd
+ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.7/manifests/install.yaml
+ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+ kubectl get po -n argocd
+ kubectl get all 
+ kubectl get all -n argocd
+ nslookup adfca49adce01425d9b913425e364b15-1010678243.us-east-1.elb.amazonaws.com
+ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
   ```  
 
 - Logged into ArgoCD with the default username and password (search online for the first-time login steps).  
