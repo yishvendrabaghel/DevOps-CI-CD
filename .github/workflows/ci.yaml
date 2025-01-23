@@ -39,8 +39,7 @@ jobs:
       uses: golangci/golangci-lint-action@v6
       with:
         version: latest
-        # timeout: 10m
-        enable: all
+        args: --enable-all
 
   push:
     runs-on: ubuntu-latest
