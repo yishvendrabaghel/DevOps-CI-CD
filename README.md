@@ -1,6 +1,6 @@
-# DevOpsified Go Web Application 🚀
+# DevOpsified Go Application 🚀
 
-This project automates the deployment of a Go web application 🌐 using modern DevOps practices, including **containerization 🐳**, **orchestration ♸️**, and **continuous delivery 🔄**. The app was provided by a developer, and I have enhanced it with Helm and GitOps principles for efficient deployments.
+This project automates the deployment of a Go Application 🌐 using modern DevOps practices, including **containerization 🐳**, **orchestration ♸️**, and **continuous delivery 🔄**. The app was provided by a developer, and I have enhanced it with Helm and GitOps principles for efficient deployments.
 
 ---
 
