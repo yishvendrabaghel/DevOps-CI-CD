@@ -30,7 +30,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.organization=your-org-name
+            -Dsonar.organization=yishu1606
             -Dsonar.projectKey=yishvendrabaghel_DevOps-CI-CD
             -Dsonar.sources=.
             -Dsonar.go.coverage.reportPaths=coverage.out
