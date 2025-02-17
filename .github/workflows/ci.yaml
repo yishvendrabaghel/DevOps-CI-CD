@@ -55,7 +55,7 @@ jobs:
 
   push:
     runs-on: ubuntu-latest
-    needs: [build, code-quality]
+    needs: build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -78,6 +78,28 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/project-2:${{ github.run_id }}
 
+      - name: Run Trivy Security Scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "${{ secrets.DOCKER_USERNAME }}/project-2:${{ github.run_id }}"
+          format: "table"
+          exit-code: 1  # Fail the job if vulnerabilities are found
+          severity: "CRITICAL,HIGH"
+
+      # Optional: Upload scan report as an artifact
+      - name: Save Trivy Scan Report
+        if: always()
+        run: |
+          mkdir -p trivy-reports
+          trivy image --format json --output trivy-reports/report.json ${{ secrets.DOCKER_USERNAME }}/project-2:${{ github.run_id }}
+
+      - name: Upload Trivy Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-report
+          path: trivy-reports/report.json
+
+
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
     needs: [push]
@@ -99,6 +121,3 @@ jobs:
           git commit -m "Update tag in Helm chart"
           git pull --rebase origin main # Pull latest changes before pushing
           git push
-
-
-#hello
