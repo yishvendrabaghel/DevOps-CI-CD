@@ -119,5 +119,5 @@ jobs:
           git config --global user.name "Yishvendra"
           git add helm/project-2-chart/values.yaml
           git commit -m "Update tag in Helm chart"
-          git pull --rebase origin main # Pull latest changes before pushing
+          git pull --rebase origin main 
           git push
